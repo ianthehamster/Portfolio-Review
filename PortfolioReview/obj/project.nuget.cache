@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "kpJtVsoZI0c=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ianch\\source\\repos\\PortfolioReview\\PortfolioReview\\PortfolioReview.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ianch\\.nuget\\packages\\anthropic\\12.53.0\\anthropic.12.53.0.nupkg.sha512",
+    "C:\\Users\\ianch\\.nuget\\packages\\microsoft.extensions.ai.abstractions\\10.5.1\\microsoft.extensions.ai.abstractions.10.5.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,177 @@
+{
+  "valuationDate": "2026-10-02",
+  "policy": {
+    "maxInstrumentPct": 25.0,
+    "maxSectorPct": 40.0,
+    "maxPriceAgeDays": 3
+  },
+  "portfolios": [
+    {
+      "portfolioId": "P1",
+      "valuationStatus": "Complete",
+      "totalValueGbp": 10000.00,
+      "exposuresProvisional": false,
+      "instrumentExposures": [
+        {
+          "instrumentId": "AZN",
+          "sector": "Healthcare",
+          "quantity": 20,
+          "priceGbp": 125.00,
+          "priceDate": "2026-10-02",
+          "valueGbp": 2500.00,
+          "exposurePct": 25.0000,
+          "breach": false
+        },
+        {
+          "instrumentId": "BARC",
+          "sector": "Financials",
+          "quantity": 1000,
+          "priceGbp": 2.00,
+          "priceDate": "2026-10-02",
+          "valueGbp": 2000.00,
+          "exposurePct": 20.0000,
+          "breach": false
+        },
+        {
+          "instrumentId": "HSBA",
+          "sector": "Financials",
+          "quantity": 500,
+          "priceGbp": 6.00,
+          "priceDate": "2026-10-02",
+          "valueGbp": 3000.00,
+          "exposurePct": 30.0000,
+          "breach": true
+        },
+        {
+          "instrumentId": "SHEL",
+          "sector": "Energy",
+          "quantity": 100,
+          "priceGbp": 25.00,
+          "priceDate": "2026-10-01",
+          "valueGbp": 2500.00,
+          "exposurePct": 25.0000,
+          "breach": false
+        }
+      ],
+      "sectorExposures": [
+        {
+          "sector": "Energy",
+          "valueGbp": 2500.00,
+          "exposurePct": 25.0000,
+          "breach": false
+        },
+        {
+          "sector": "Financials",
+          "valueGbp": 5000.00,
+          "exposurePct": 50.0000,
+          "breach": true
+        },
+        {
+          "sector": "Healthcare",
+          "valueGbp": 2500.00,
+          "exposurePct": 25.0000,
+          "breach": false
+        }
+      ],
+      "issues": [
+        {
+          "type": "INSTRUMENT_LIMIT_BREACH",
+          "subject": "HSBA",
+          "message": "HSBA is 30.0000% of portfolio, above the 25.0% instrument limit.",
+          "exposurePct": 30.0000,
+          "limitPct": 25.0
+        },
+        {
+          "type": "SECTOR_LIMIT_BREACH",
+          "subject": "Financials",
+          "message": "Financials is 50.0000% of portfolio, above the 40.0% sector limit.",
+          "exposurePct": 50.0000,
+          "limitPct": 40.0
+        }
+      ]
+    },
+    {
+      "portfolioId": "P2",
+      "valuationStatus": "Incomplete",
+      "totalValueGbp": 8500.00,
+      "exposuresProvisional": true,
+      "instrumentExposures": [
+        {
+          "instrumentId": "BP",
+          "sector": "Energy",
+          "quantity": 1000,
+          "priceGbp": 4.00,
+          "priceDate": "2026-09-25",
+          "valueGbp": 4000.00,
+          "exposurePct": 47.0588,
+          "breach": true
+        },
+        {
+          "instrumentId": "ULVR",
+          "sector": "Consumer Staples",
+          "quantity": 100,
+          "priceGbp": 45.00,
+          "priceDate": "2026-10-02",
+          "valueGbp": 4500.00,
+          "exposurePct": 52.9412,
+          "breach": true
+        }
+      ],
+      "sectorExposures": [
+        {
+          "sector": "Consumer Staples",
+          "valueGbp": 4500.00,
+          "exposurePct": 52.9412,
+          "breach": true
+        },
+        {
+          "sector": "Energy",
+          "valueGbp": 4000.00,
+          "exposurePct": 47.0588,
+          "breach": true
+        }
+      ],
+      "issues": [
+        {
+          "type": "STALE_PRICE",
+          "subject": "BP",
+          "message": "Price dated 2026-09-25 is 7 days old (max 3); still used in valuation.",
+          "ageDays": 7
+        },
+        {
+          "type": "MISSING_PRICE",
+          "subject": "XYZ",
+          "message": "No price for XYZ; excluded from portfolio value."
+        },
+        {
+          "type": "INSTRUMENT_LIMIT_BREACH",
+          "subject": "BP",
+          "message": "BP is 47.0588% of portfolio, above the 25.0% instrument limit.",
+          "exposurePct": 47.0588,
+          "limitPct": 25.0
+        },
+        {
+          "type": "INSTRUMENT_LIMIT_BREACH",
+          "subject": "ULVR",
+          "message": "ULVR is 52.9412% of portfolio, above the 25.0% instrument limit.",
+          "exposurePct": 52.9412,
+          "limitPct": 25.0
+        },
+        {
+          "type": "SECTOR_LIMIT_BREACH",
+          "subject": "Consumer Staples",
+          "message": "Consumer Staples is 52.9412% of portfolio, above the 40.0% sector limit.",
+          "exposurePct": 52.9412,
+          "limitPct": 40.0
+        },
+        {
+          "type": "SECTOR_LIMIT_BREACH",
+          "subject": "Energy",
+          "message": "Energy is 47.0588% of portfolio, above the 40.0% sector limit.",
+          "exposurePct": 47.0588,
+          "limitPct": 40.0
+        }
+      ]
+    }
+  ]
+}
